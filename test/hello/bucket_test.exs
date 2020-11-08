@@ -2,7 +2,7 @@ defmodule Hello.BucketTest do
   use ExUnit.Case, async: true
 
   setup do
-    {:ok, bucket} = Hello.Bucket.start_link()
+    bucket = start_supervised!(Hello.Bucket)
 
     # The return value of the last statement in a function is returned by the function.
     # In this case, the return value of setup is merged into the `context` of all tests that

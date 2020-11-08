@@ -8,7 +8,7 @@ defmodule Hello.Bucket do
   @doc """
   Starts a new bucket.
   """
-  def start_link do
+  def start_link(_opts) do
     # `fn` creates an anonymous function
     Agent.start_link(fn -> %{} end)
   end
